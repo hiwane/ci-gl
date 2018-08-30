@@ -8,11 +8,8 @@ before_install:
   - mkdir gitlab
   - curl -o gitlab/docker-compose.yml https://raw.githubusercontent.com/sameersbn/docker-gitlab/master/docker-compose.yml
   - (cd gitlab; docker-compose up -d)
-  - echo "end"
 
 script:
   - ls
-  - curl --user "root" --request POST --data '{"grant_type": "password", "username": "root", "password": "5iveL!fe"}' http://localhost:10080//oauth/token
-  - pwd
-  - curl https://localhost:10080/api/v4/projects?access_token=OAUTH-TOKEN
+  - curl https://localhost:10080/
 
