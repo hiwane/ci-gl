@@ -7,7 +7,8 @@ before_install:
   - sudo apt-get update
   - mkdir gitlab
   - curl -o gitlab/docker-compose.yml https://raw.githubusercontent.com/sameersbn/docker-gitlab/master/docker-compose.yml
-  - (cd gitlab; docker-compose up -d)
+  - (cd gitlab; docker-compose up -d &)
+  - echo "end"
 
 script:
   - ls
