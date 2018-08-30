@@ -3,7 +3,7 @@ sudo: required
 env:
   - DOCKER_COMPOSE_VERSION: 1.8.0
   
-cache:
+cache_:
   - apt: true  
   - apt-get: true
   
