@@ -7,10 +7,12 @@ before_install:
   - sudo apt-get update
   - mkdir gitlab
   - curl -o gitlab/docker-compose.yml https://raw.githubusercontent.com/sameersbn/docker-gitlab/master/docker-compose.yml
-  - (cd gitlab; docker-compose up -d)
+  - (cd gitlab; docker-compose up)
 
 script:
   - ls
   - curl http://localhost:10080/
-  - curl --request POST http://localhost:10080//oauth/token
+  - curl --request POST http://localhost:10080/oauth/token
+#  - curl --request POST --data '{"grant_type": "password", "username": "root", "password": "5iveL!fe"}' http://localhost:10080/oauth/token
+   
 
