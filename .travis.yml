@@ -3,6 +3,10 @@ sudo: required
 env:
   - DOCKER_COMPOSE_VERSION: 1.8.0
   
+cache:
+  - apt: true  
+  - apt-get: true
+  
 services:
   - docker
 
