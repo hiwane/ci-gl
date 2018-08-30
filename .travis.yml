@@ -1,0 +1,14 @@
+sudo: required
+
+language: bash
+
+services:
+  - docker
+
+before_install:
+  - mkdir gitlab
+  - curl -o gitlab/docker-compose.yml https://raw.githubusercontent.com/sameersbn/docker-gitlab/master/docker-compose.yml
+  - (cd gitlab; docker-compose up)
+
+script:
+  - ls
