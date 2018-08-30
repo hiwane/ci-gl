@@ -11,3 +11,6 @@ before_install:
 
 script:
   - ls
+  - curl --user "root" --request POST --data '{"grant_type": "password", "username": "root", "password": "5iveL!fe"}' http://localhost:10080//oauth/token
+  - pwd
+
